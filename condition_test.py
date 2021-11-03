@@ -39,5 +39,6 @@ if __name__ == '__main__':
     xiao_ai = XiaoAi(cond)
     tian_mao = TianMao(cond)
 
+#注意先wait，然后在notify
     xiao_ai.start()
     tian_mao.start()
