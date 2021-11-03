@@ -8,7 +8,7 @@ def fib(n):
     else:
         return fib(n - 1) + fib(n - 2)
 
-
+# 使用多进程必须使用if __name__ == '__main__'来控制，否则windouws下执行会报错
 if __name__ == '__main__':
     with ProcessPoolExecutor(5) as executor:
         all_task = [executor.submit(fib, num) for num in range(25, 35)]
