@@ -20,7 +20,7 @@ def generate_queue():
         queue_data.put(i)
         time.sleep(1)
 
-
+#线程之间的通信，用queue，因为queue是线程安全的
 if '__main__' == __name__:
     generate_thread = Thread(target=generate_queue)
     handle_thread_1 = Thread(target=handle_queue)
